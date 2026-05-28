@@ -9,17 +9,21 @@ A modern, highly responsive, and interactive personal developer portfolio websit
 
 ## ✨ Features
 - **Dark/Light Mode:** Seamless theme toggling with local storage persistence.
-- **Glassmorphism Design:** Premium UI with frosted glass effects, glowing borders, and gradient accents.
+- **Glassmorphism & Micro-interactions:** Premium UI with frosted glass effects, glowing borders, custom `cubic-bezier` hover elevations, and tactile button press states.
 - **Dynamic Animations:** Floating objects, scroll-triggered reveal animations (`IntersectionObserver`), and interactive typing effects (`Typed.js`).
-- **Responsive Layout:** fully optimized for desktops, tablets, and mobile devices with a slide-out hamburger menu.
+- **SEO & Accessibility:** Fully optimized with semantic HTML5 (`<main>`, `<nav>`), ARIA attributes, Open Graph meta tags, Twitter Cards, and canonical URLs.
+- **Responsive Layout:** Fully optimized for desktops, tablets, and mobile devices with an accessible slide-out hamburger menu.
 - **Experience Timeline:** Vertical animated timeline to showcase professional history and internships.
-- **Contact Form Validation:** Simulated backend contact form with a dynamic toast notification system.
+- **Functional Contact Form:** Fully working contact form powered by the **Web3Forms API** to route messages directly to an email inbox.
+- **CI/CD Pipeline:** Automated GitHub Actions workflow for HTML validation (`HTMLHint`) and seamless zero-downtime deployment to Vercel.
 - **Native PDF Download:** 1-click resume download feature.
 
 ## 🛠 Tech Stack
 - **HTML5:** Semantic and accessible structure.
-- **CSS3:** Custom properties (variables) for theme management, Flexbox/Grid layouts, keyframe animations, and media queries.
-- **JavaScript (Vanilla):** DOM manipulation, event handling, and scroll observations.
+- **CSS3:** Custom properties (variables) for theme management, Flexbox/Grid layouts, advanced keyframe animations, and `cubic-bezier` transitions.
+- **JavaScript (Vanilla):** DOM manipulation, event handling, scroll observations, and `fetch` API requests.
+- **Web3Forms API:** Backend-as-a-service for secure email routing without a custom server.
+- **GitHub Actions:** CI/CD automation for validation and deployment.
 - **Typed.js:** Library for dynamic typing animations.
 - **FontAwesome:** Scalable vector icons.
 - **Google Fonts:** Inter & Plus Jakarta Sans typography.
@@ -27,11 +31,13 @@ A modern, highly responsive, and interactive personal developer portfolio websit
 ## 📂 Folder Structure
 ```text
 Portfolio/
-├── index.html        # Main HTML structure and content
-├── stylesheet.css    # Core styling, animations, and responsive breakpoints
-├── main.js           # Interactive logic, theme toggle, form handling
+├── .github/workflows/
+│   └── ci-cd.yml     # Automated CI/CD pipeline for Vercel deployment
+├── index.html        # Main HTML structure with SEO and A11y tags
+├── stylesheet.css    # Core styling, micro-interactions, and responsive breakpoints
+├── main.js           # Interactive logic, theme toggle, Web3Forms integration
 ├── Me.jpeg           # Circular profile picture asset
-├── Saladi_Rishita_Resume.pdf        # Downloadable CV/Resume
+├── Saladi_Rishita_Resume.pdf  # Downloadable CV/Resume
 └── README.md         # Project documentation
 ```
 
@@ -57,11 +63,21 @@ To run this project locally, simply clone the repository and open the HTML file.
       --accent-violet: #8b5cf6;
   }
   ```
-- **Resume File:** Replace the existing `Saladi_Rishita_Resume.pdf` in the root directory with your updated CV. Make sure the filename matches.
+- **Profile Picture:** Replace the existing `Me.jpeg` in the root directory with your own profile image to automatically update the hero section.
+- **Resume File:** Add your updated CV to the root directory. If you use a different filename (e.g., `my_resume.pdf`), you must update the `href` and `download` attributes in `index.html` on lines containing `<a href="./resume.pdf"`.
 - **Typing Animation:** Edit the strings array in `main.js` to customize the titles in the hero section.
+- **Contact Form Emails:** Update the `access_key` in `main.js` with your own key from [Web3Forms](https://web3forms.com/) to receive messages at your preferred email address.
 
-## 🌐 Deployment
-This static site can be deployed easily for free on platforms like **GitHub Pages**, **Vercel**, or **Netlify**.
+## 🌐 Deployment & CI/CD
+This static site is equipped with a GitHub Actions workflow (`.github/workflows/ci-cd.yml`) that automatically tests your HTML and deploys changes to **Vercel**. 
+
+**To use the automated Vercel pipeline:**
+1. Create a token in your Vercel Dashboard.
+2. In your GitHub repository, go to **Settings > Secrets and variables > Actions**.
+3. Add three repository secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID`.
+4. The pipeline will now automatically deploy your site whenever you push to the `main` branch.
+
+Alternatively, you can delete the `.github` folder and use Vercel, Netlify, or GitHub Pages' native automated dashboard integrations.
 
 **To deploy to GitHub Pages:**
 1. Push your code to a public GitHub repository.
@@ -69,13 +85,6 @@ This static site can be deployed easily for free on platforms like **GitHub Page
 3. Navigate to the **Pages** section on the left sidebar.
 4. Under "Source", select the `main` branch and save.
 5. Your portfolio will be live in a few minutes!
-
-## 📸 Screenshots
-*(You can add screenshots of your site here)*
-
-| Dark Mode | Light Mode |
-|-----------|------------|
-| ![Dark Mode](https://via.placeholder.com/400x250.png?text=Dark+Mode+Screenshot) | ![Light Mode](https://via.placeholder.com/400x250.png?text=Light+Mode+Screenshot) |
 
 ## 📫 Contact Info
 - **LinkedIn:** [Rishita Saladi](https://linkedin.com/in/rishita-saladi-397319324)
