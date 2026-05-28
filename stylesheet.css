@@ -278,6 +278,8 @@ ul {
   gap: 5px;
   cursor: pointer;
   padding: 8px;
+  background: transparent;
+  border: none;
   z-index: 1001;
 }
 
