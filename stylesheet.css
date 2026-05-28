@@ -458,15 +458,34 @@ ul {
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 20px var(--glow-cyan);
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent-gradient-hover);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: -1;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--glow-cyan);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
 }
 
 .btn-secondary {
@@ -482,13 +501,17 @@ ul {
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-secondary:hover {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
 }
 
 .home-socials {
@@ -509,7 +532,7 @@ ul {
   border-radius: 50%;
   color: var(--text-secondary);
   font-size: 1.1rem;
-  transition: all var(--transition-base);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .home-socials a:hover {
@@ -517,6 +540,10 @@ ul {
   color: var(--accent-cyan);
   background: var(--glow-cyan);
   transform: translateY(-3px);
+}
+
+.home-socials a:active {
+  transform: scale(0.92);
 }
 
 /* ===== HERO IMAGE ===== */
@@ -740,7 +767,7 @@ ul {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 28px;
-  transition: all var(--transition-base);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
 }
@@ -755,14 +782,14 @@ ul {
   background: var(--accent-gradient);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform var(--transition-base);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .timeline-card:hover {
   background: var(--card-hover-bg);
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.02);
   border-color: rgba(6, 182, 212, 0.2);
-  box-shadow: 0 12px 40px var(--shadow-color);
+  box-shadow: 0 16px 40px var(--shadow-color);
 }
 
 .timeline-card:hover::before {
@@ -803,12 +830,16 @@ ul {
 .timeline-link {
   font-size: 1.15rem;
   color: var(--text-muted);
-  transition: all var(--transition-base);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .timeline-link:hover {
   color: var(--accent-cyan);
   transform: scale(1.15);
+}
+
+.timeline-link:active {
+  transform: scale(0.95);
 }
 
 .timeline-meta {
@@ -918,7 +949,7 @@ ul {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 32px 28px;
-  transition: all var(--transition-base);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
 }
@@ -933,14 +964,14 @@ ul {
   background: var(--accent-gradient);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform var(--transition-base);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .skill-card:hover {
   background: var(--card-hover-bg);
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.03);
   border-color: rgba(6, 182, 212, 0.2);
-  box-shadow: 0 12px 40px var(--shadow-color);
+  box-shadow: 0 16px 40px var(--shadow-color);
 }
 
 .skill-card:hover::before {
@@ -1016,12 +1047,12 @@ ul {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   overflow: hidden;
-  transition: all var(--transition-base);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
   border-color: rgba(6, 182, 212, 0.3);
   box-shadow: 0 20px 60px var(--shadow-color);
 }
@@ -1049,11 +1080,16 @@ ul {
 .project-card-links a {
   font-size: 1.15rem;
   color: var(--text-muted);
-  transition: color var(--transition-base);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card-links a:hover {
   color: var(--accent-cyan);
+  transform: scale(1.15);
+}
+
+.project-card-links a:active {
+  transform: scale(0.95);
 }
 
 .project-card-body {
@@ -1098,6 +1134,13 @@ ul {
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: var(--border-radius-pill);
   background: var(--glow-cyan);
+  transition: all 0.3s ease;
+}
+
+.project-card-tags span:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
 }
 
 /* ===== CONTACT SECTION ===== */
