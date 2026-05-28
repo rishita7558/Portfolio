@@ -122,25 +122,37 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
-        setTimeout(() => {
-            const formData = {
-                name: document.getElementById('contactName').value,
-                email: document.getElementById('contactEmail').value,
-                subject: document.getElementById('contactSubject').value,
-                message: document.getElementById('contactMessage').value,
-                timestamp: new Date().toISOString()
-            };
+        const formData = {
+            access_key: "96b7c0d0-5475-40d1-985c-e97d308b209e", 
+            name: document.getElementById('contactName').value,
+            email: document.getElementById('contactEmail').value,
+            subject: document.getElementById('contactSubject').value,
+            message: document.getElementById('contactMessage').value
+        };
 
-            const messages = JSON.parse(localStorage.getItem('portfolio-messages') || '[]');
-            messages.push(formData);
-            localStorage.setItem('portfolio-messages', JSON.stringify(messages));
-
-            contactForm.reset();
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(async (response) => {
+            if (response.status === 200) {
+                showToast('Message sent successfully! I\'ll get back to you soon. ✨');
+                contactForm.reset();
+            } else {
+                showToast('Failed to send message. Please try again later.');
+            }
+        })
+        .catch(error => {
+            showToast('Something went wrong. Please check your connection.');
+        })
+        .finally(() => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-
-            showToast('Message sent successfully! I\'ll get back to you soon. ✨');
-        }, 1500);
+        });
     });
 
     // ===== TOAST NOTIFICATION =====
