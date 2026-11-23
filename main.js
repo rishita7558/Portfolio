@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== TYPED.JS INITIALIZATION =====
     new Typed('.typed-text', {
         strings: [
-            'Web Developer',
-            'ML Enthusiast',
-            'App Developer',
             'Problem Solver',
-            'CS Undergraduate'
+            'Machine Learning Enthusiast',
+            'Full-Stack Developer',
+            'AI Research Enthusiast'
         ],
-        typeSpeed: 80,
-        backSpeed: 50,
-        backDelay: 1500,
+        typeSpeed: 60,
+        backSpeed: 35,
+        backDelay: 1800,
+        startDelay: 300,
         loop: true,
         showCursor: true,
         cursorChar: '|'

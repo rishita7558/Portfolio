@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
     <title>Rishita Saladi | Developer Portfolio</title>
     <meta name="title" content="Rishita Saladi | Developer Portfolio">
-    <meta name="description" content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
-    <meta name="keywords" content="Rishita Saladi, portfolio, developer, web developer, machine learning, AI, Flutter, full stack, software engineer, IIIT Dharwad">
+    <meta name="description"
+        content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
+    <meta name="keywords"
+        content="Rishita Saladi, portfolio, developer, web developer, machine learning, AI, Flutter, full stack, software engineer, IIIT Dharwad">
     <meta name="author" content="Rishita Saladi">
     <meta name="theme-color" content="#171613">
     <link rel="canonical" href="https://rishita7558.github.io/portfolio/">
-    
+
     <!-- Prevent Theme Flickering & Respect System Preference -->
     <script>
-        (function() {
+        (function () {
             try {
                 var saved = localStorage.getItem('portfolio-theme');
                 var theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
                 document.documentElement.setAttribute('data-theme', theme);
                 var meta = document.querySelector('meta[name="theme-color"]');
                 if (meta) meta.setAttribute('content', theme === 'dark' ? '#171613' : '#F3EFE7');
-            } catch (e) {}
+            } catch (e) { }
         })();
     </script>
-    
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rishita7558.github.io/portfolio/">
     <meta property="og:title" content="Rishita Saladi | Developer Portfolio">
-    <meta property="og:description" content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
+    <meta property="og:description"
+        content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
     <meta property="og:image" content="https://rishita7558.github.io/portfolio/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://rishita7558.github.io/portfolio/">
     <meta property="twitter:title" content="Rishita Saladi | Developer Portfolio">
-    <meta property="twitter:description" content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
+    <meta property="twitter:description"
+        content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
     <meta property="twitter:image" content="https://rishita7558.github.io/portfolio/og-image.jpg">
 
     <!-- Google Fonts: DM Serif Display, Manrope, IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" onerror="this.onerror=null;this.href='https://unpkg.com/@fortawesome/fontawesome-free@6.5.1/css/all.min.css';">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+        onerror="this.onerror=null;this.href='https://unpkg.com/@fortawesome/fontawesome-free@6.5.1/css/all.min.css';">
 
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -56,6 +65,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
 
     <!-- ===== HEADER ===== -->
@@ -75,7 +85,8 @@
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <i class="fa-solid fa-moon"></i>
             </button>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -89,418 +100,621 @@
     <main id="main-content">
         <!-- ===== HERO SECTION ===== -->
         <section class="home" id="home">
-        <div class="home-content">
-            <p class="greeting">Hello, I'm </p>
-            <h1>Rishita Saladi</h1>
-            <div class="typed-wrapper">
-                <span class="typed-text"></span>
-            </div>
-            <p>Computer Science undergraduate with strong foundations in Data Structures, Machine Learning, and App Development. Passionate about AI, analytics, and building real-world impactful solutions.</p>
-
-            <div class="home-actions">
-                <a href="#projects" class="btn-primary">
-                    <i class="fa-solid fa-rocket"></i> View Projects
-                </a>
-                <a href="./Saladi_Rishita_Resume.pdf" download="Rishita_Saladi_Resume.pdf" class="btn-secondary" id="downloadCV">
-                    <i class="fa-solid fa-download"></i> Download CV
-                </a>
-            </div>
-
-            <div class="home-socials">
-                <a href="https://linkedin.com/in/rishita-saladi-397319324" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/rishita7558" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="mailto:rishitasaladi2007@gmail.com" aria-label="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <div class="hero-image-ring">
-                <img src="./Me.jpeg" alt="Rishita Saladi">
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="about" id="about">
-        <div class="section-header reveal">
-            <p class="section-subtitle">Get to know me</p>
-            <h2 class="section-title">About <span>Me</span></h2>
-        </div>
-
-        <div class="about-content">
-            <div class="about-text reveal">
-                <h3>CS Undergraduate &amp; Aspiring Developer</h3>
-                <p>I'm a B.Tech Computer Science student at the <strong>Indian Institute of Information Technology, Dharwad</strong> with a CGPA of 9.68. I enjoy turning complex problems into elegant, user-friendly digital solutions.</p>
-                <p>As an App Developer Intern at <strong>IDRP (IIIT Dharwad Research Park)</strong>, I built a mobile application for relapse prevention using Dart, Flutter, and MongoDB — integrating psycho-social intervention features for real-world healthcare impact.</p>
-
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">4+</div>
-                        <div class="stat-label">Projects</div>
+            <div class="home-container">
+                <div class="home-content">
+                    <div class="hero-status-badge reveal">
+                        <span class="status-pulse">
+                            <span class="status-dot"></span>
+                            <span class="status-ring"></span>
+                        </span>
+                        <span class="status-text">Available for Research &amp; Engineering Roles</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">9.68</div>
-                        <div class="stat-label">CGPA</div>
+
+                    <p class="greeting reveal">Hello, I'm</p>
+                    <h1 class="reveal">Rishita Saladi</h1>
+
+                    <div class="typed-wrapper reveal">
+                        <span class="role-prefix">Focus &mdash;</span>
+                        <span class="typed-text"></span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1+</div>
-                        <div class="stat-label">Internship</div>
+
+                    <p class="hero-bio reveal">
+                        Computer Science undergraduate at <strong>IIIT Dharwad</strong> (9.68 CGPA) building
+                        intelligent, resilient systems. Focused on AI/ML research, NLP, and robust full-stack
+                        applications that bridge theoretical foundations with real-world impact.
+                    </p>
+
+                    <div class="home-actions reveal">
+                        <a href="#projects" class="btn-primary">
+                            <i class="fa-solid fa-rocket"></i> View Projects
+                        </a>
+                        <a href="./Saladi_Rishita_Resume.pdf" download="Rishita_Saladi_Resume.pdf" class="btn-secondary"
+                            id="downloadCV">
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="home-socials reveal">
+                        <a href="https://linkedin.com/in/rishita-saladi-397319324" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/rishita7558" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:rishitasaladi2007@gmail.com" aria-label="Email" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
 
-                <a href="./Saladi_Rishita_Resume.pdf" download="Rishita_Saladi_Resume.pdf" class="btn-primary" id="downloadCVAbout">
-                    <i class="fa-solid fa-download"></i> Download Resume
-                </a>
-            </div>
-        </div>
-    </section>
+                <div class="hero-image-wrapper reveal">
+                    <div class="hero-backdrop-organic"></div>
+                    <div class="hero-backdrop-ring"></div>
+                    <div class="hero-image-ring">
+                        <img src="./Me.jpeg" alt="Rishita Saladi">
+                    </div>
 
-    <!-- ===== EXPERIENCE SECTION ===== -->
-    <section class="experience" id="experience">
-        <div class="section-header reveal">
-            <p class="section-subtitle">Where I've worked</p>
-            <h2 class="section-title">My <span>Experience</span></h2>
-            <p class="section-description">Professional experience and internships that shaped my skills and expertise.</p>
-        </div>
+                    <!-- Floating Card 1: Core Technical Focus -->
+                    <div class="floating-badge floating-badge-interests">
+                        <div class="floating-badge-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="floating-badge-info">
+                            <span class="badge-tag">Core Focus</span>
+                            <strong>AI/ML &bull; Full-Stack Systems</strong>
+                        </div>
+                    </div>
 
-        <div class="timeline">
-            <div class="timeline-item reveal">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
+                    <!-- Floating Card 2: Academic Standing -->
+                    <div class="floating-badge floating-badge-education">
+                        <div class="floating-badge-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="floating-badge-info">
+                            <span class="badge-tag">IIIT Dharwad</span>
+                            <strong>B.Tech CS &bull; 9.68 CGPA</strong>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-card">
-                    <div class="timeline-card-header">
-                        <div>
-                            <div style="display:flex;align-items:center;gap:12px;">
-                                <h3>App Developer Intern</h3>
-                                <a href="https://github.com/rishita7558/DimhansApp" target="_blank" rel="noopener noreferrer" aria-label="GitHub link" class="timeline-link"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </section>
+
+        <!-- ===== QUICK HIGHLIGHTS ===== -->
+        <section class="quick-highlights" id="highlights">
+            <div class="highlights-grid reveal">
+                <!-- Highlight 1: Academic Background -->
+                <div class="highlight-card">
+                    <div class="highlight-header">
+                        <div class="highlight-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="highlight-kicker">Undergraduate Background</span>
+                    </div>
+                    <div class="highlight-body">
+                        <h3>IIIT Dharwad &bull; B.Tech CSE</h3>
+                        <p><strong>9.68 CGPA</strong> &mdash; Rigorous foundations in Data Structures, Algorithms,
+                            Software Engineering, and Machine Learning.</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <span class="highlight-pill"><i class="fa-solid fa-award"></i> Academic Top Performer</span>
+                    </div>
+                </div>
+
+                <!-- Highlight 2: Major Projects -->
+                <div class="highlight-card">
+                    <div class="highlight-header">
+                        <div class="highlight-icon">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </div>
+                        <span class="highlight-kicker">Major Projects</span>
+                        <span class="highlight-stat-pill">6+ Systems</span>
+                    </div>
+                    <div class="highlight-body">
+                        <h3>Full-Stack &amp; AI Engineering</h3>
+                        <p>Architected RAG-based virtual classrooms, real-time financial NLP streaming, and
+                            constraint-based scheduling engines.</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <span class="highlight-pill"><i class="fa-solid fa-layer-group"></i> Microservices &amp;
+                            RAG</span>
+                    </div>
+                </div>
+
+                <!-- Highlight 3: Research Interests -->
+                <div class="highlight-card">
+                    <div class="highlight-header">
+                        <div class="highlight-icon">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <span class="highlight-kicker">Research Focus</span>
+                    </div>
+                    <div class="highlight-body">
+                        <h3>Explainable AI &amp; NLP</h3>
+                        <p>Neuro-symbolic machine learning for Federal Reserve rate prediction, with interpretable
+                            decision models. Multilingual transformer-based framework for social media polarization
+                            detection.</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <span class="highlight-pill"><i class="fa-solid fa-flask"></i> Applied ML , NLP &amp;
+                            Explainable AI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about" id="about">
+            <div class="section-header reveal">
+                <p class="section-subtitle">Get to know me</p>
+                <h2 class="section-title">About <span>Me</span></h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h3>CS Undergraduate &amp; Aspiring Developer</h3>
+                    <p>I'm a B.Tech Computer Science student at the <strong>Indian Institute of Information Technology,
+                            Dharwad</strong> with a CGPA of 9.68. I enjoy turning complex problems into elegant,
+                        user-friendly digital solutions.</p>
+                    <p>As an App Developer Intern at <strong>IDRP (IIIT Dharwad Research Park)</strong>, I built a
+                        mobile application for relapse prevention using Dart, Flutter, and MongoDB — integrating
+                        psycho-social intervention features for real-world healthcare impact.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">9.68</div>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1+</div>
+                            <div class="stat-label">Internship</div>
+                        </div>
+                    </div>
+
+                    <a href="./Saladi_Rishita_Resume.pdf" download="Rishita_Saladi_Resume.pdf" class="btn-primary"
+                        id="downloadCVAbout">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE SECTION ===== -->
+        <section class="experience" id="experience">
+            <div class="section-header reveal">
+                <p class="section-subtitle">Where I've worked</p>
+                <h2 class="section-title">My <span>Experience</span></h2>
+                <p class="section-description">Professional experience and internships that shaped my skills and
+                    expertise.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div>
+                                <div style="display:flex;align-items:center;gap:12px;">
+                                    <h3>App Developer Intern</h3>
+                                    <a href="https://github.com/rishita7558/DimhansApp" target="_blank"
+                                        rel="noopener noreferrer" aria-label="GitHub link" class="timeline-link"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                                <p class="timeline-company">
+                                    <i class="fa-solid fa-building"></i> IDRP — IIIT Dharwad Research Park
+                                </p>
                             </div>
-                            <p class="timeline-company">
-                                <i class="fa-solid fa-building"></i> IDRP — IIIT Dharwad Research Park
-                            </p>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">
+                                    <i class="fa-regular fa-calendar"></i> Jun 2025 — Sep 2025
+                                </span>
+                                <span class="timeline-location">
+                                    <i class="fa-solid fa-location-dot"></i> Dharwad, India
+                                </span>
+                            </div>
                         </div>
-                        <div class="timeline-meta">
-                            <span class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i> Jun 2025 — Sep 2025
-                            </span>
-                            <span class="timeline-location">
-                                <i class="fa-solid fa-location-dot"></i> Dharwad, India
-                            </span>
+                        <div class="timeline-card-body">
+                            <ul class="timeline-points">
+                                <li>Developed a mobile application for <strong>relapse prevention</strong> among
+                                    patients with alcohol use disorder in the Indian scenario</li>
+                                <li>Built the application using <strong>Dart, Flutter, and MongoDB</strong> with a focus
+                                    on performance and usability</li>
+                                <li>Integrated <strong>psycho-social intervention</strong> features to deliver
+                                    real-world healthcare impact</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-card-footer">
+                            <div class="timeline-tags">
+                                <span>Dart</span>
+                                <span>Flutter</span>
+                                <span>MongoDB</span>
+                                <span>Mobile Dev</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-card-body">
-                        <ul class="timeline-points">
-                            <li>Developed a mobile application for <strong>relapse prevention</strong> among patients with alcohol use disorder in the Indian scenario</li>
-                            <li>Built the application using <strong>Dart, Flutter, and MongoDB</strong> with a focus on performance and usability</li>
-                            <li>Integrated <strong>psycho-social intervention</strong> features to deliver real-world healthcare impact</li>
-                        </ul>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
                     </div>
-                    <div class="timeline-card-footer">
-                        <div class="timeline-tags">
-                            <span>Dart</span>
-                            <span>Flutter</span>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div>
+                                <div style="display:flex;align-items:center;gap:12px;">
+                                    <h3>Web Developer Intern</h3>
+                                </div>
+                                <p class="timeline-company">
+                                    <i class="fa-solid fa-building"></i> InAmigos Foundation — NGO
+                                </p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">
+                                    <i class="fa-regular fa-calendar"></i> May 2026 — Jun 2026
+                                </span>
+                                <span class="timeline-location">
+                                    <i class="fa-solid fa-location-dot"></i> Remote
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-card-body">
+                            <ul class="timeline-points">
+                                <li>Designed NGO website feature prototypes in Figma with a focus on user experience.
+                                </li>
+                                <li>Analyzed website UI/UX and proposed design and usability improvements.</li>
+                                <li>Built AI-generated websites using Wix, WordPress, and no-code website builders.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-card-footer">
+                            <div class="timeline-tags">
+                                <span>UI/UX Design</span>
+                                <span>Figma</span>
+                                <span>Wix</span>
+                                <span>WordPress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section class="skills" id="skills">
+            <div class="section-header reveal">
+                <p class="section-subtitle">What I work with</p>
+                <h2 class="section-title">My <span>Skills</span></h2>
+                <p class="section-description">Technologies and tools I've been working with to build impactful
+                    projects.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>Core languages for algorithms, data structures, and software development.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Dart</span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern web applications and interfaces.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Cross-platform mobile applications with beautiful UI and robust backends.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3>ML &amp; AI Tools</h3>
+                    <p>Machine learning frameworks and NLP models for intelligent systems.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">XLM-RoBERTa</span>
+                        <span class="skill-tag">MiniLM</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">FAISS</span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3>Databases</h3>
+                    <p>Data storage and management for scalable applications.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Tools &amp; Platforms</h3>
+                    <p>Development tools and platforms for efficient project workflows.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Groq LLMs</span>
+                        <span class="skill-tag">Excel Automation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section class="projects" id="projects">
+            <div class="section-header reveal">
+                <p class="section-subtitle">What I've built</p>
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <p class="section-description">A selection of projects showcasing my skills in AI, web development, and
+                    full-stack engineering.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                        <div class="project-card-links">
+                            <a href="https://github.com/rishita7558/multilingual-polarization-detection" target="_blank"
+                                rel="noopener noreferrer" aria-label="GitHub link"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Multilingual Polarization Detection</h3>
+                        <p>A multilingual framework for online polarization detection using transformer embeddings with
+                            multi-label classification and threshold calibration.</p>
+                        <div class="project-card-tags">
+                            <span>XLM-RoBERTa</span>
+                            <span>MiniLM</span>
+                            <span>Scikit-learn</span>
+                            <span>HuggingFace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                        <div class="project-card-links">
+                            <a href="https://github.com/rishita7558/timetable-generator-Logic-Beyond" target="_blank"
+                                rel="noopener noreferrer" aria-label="GitHub link"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Automated Timetable Generator</h3>
+                        <p>A CSV-driven academic timetable generation system with intelligent course scheduling,
+                            classroom allocation, and Flask-based visualization with Excel export.</p>
+                        <div class="project-card-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                        <div class="project-card-links">
+                            <a href="https://github.com/rishita7558/Project-Eval-Tool" target="_blank"
+                                rel="noopener noreferrer" aria-label="GitHub link"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Agentic Virtual Classroom</h3>
+                        <p>An AI-driven academic platform built on a three-server microservices architecture, featuring
+                            RAG-powered course assistance, conversational memory, adaptive teaching, and hybrid LLM
+                            inference with cloud and local AI models.</p>
+                        <div class="project-card-tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
                             <span>MongoDB</span>
-                            <span>Mobile Dev</span>
+                            <span>FAISS</span>
+                            <span>Groq</span>
+                            <span>HuggingFace</span>
+                            <span>Ollama</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                        <div class="project-card-links">
+                            <a href="https://github.com/rishita7558/Seating-Arrangement" target="_blank"
+                                rel="noopener noreferrer" aria-label="GitHub link"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Exam Seating Arrangement</h3>
+                        <p>A full-stack seating allocation system with constraint-based seat allocation, CSV
+                            preprocessing, and automated Excel seating plans with room layouts.</p>
+                        <div class="project-card-tags">
+                            <span>React.js</span>
+                            <span>FastAPI</span>
+                            <span>Python</span>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                        <div class="project-card-links">
+                            <a href="https://github.com/rishita7558/BugBounty" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>BugBounty Arena</h3>
+                        <p>An interactive coding security and debugging sandbox where users identify and fix
+                            vulnerabilities, concurrency issues, and DSA edge cases across 9 programming languages.
+                            Features AI-generated challenges, isolated code execution, automated evaluation, and
+                            privacy-focused browser-side persistence.</p>
+                        <div class="project-card-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Vite</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>Dexie.js</span>
+                            <span>IndexedDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <i class="fa-solid fa-folder-open folder-icon"></i>
+                        <div class="project-card-links">
+                            <a href="https://github.com/rishita7558" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>FinSense - Financial Conversation Intelligence</h3>
+                        <p>An AI-powered financial conversation analysis platform supporting batch audio processing and
+                            real-time speech streaming. Leverages Whisper-based transcription, NLP-driven insight
+                            extraction, and WebSocket-powered updates to identify topics, intent, sentiment, risks, and
+                            financial entities, with persistent conversation history.</p>
+                        <div class="project-card-tags">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Streamlit</span>
+                            <span>WebSockets</span>
+                            <span>MongoDB</span>
+                            <span>Redis</span>
+                            <span>Docker</span>
+                            <span>OpenAI Whisper Large V3</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-card">
-                    <div class="timeline-card-header">
+
+            <div class="projects-archive-footer reveal">
+                <a href="https://github.com/rishita7558?tab=repositories" target="_blank" rel="noopener noreferrer"
+                    class="btn-secondary">
+                    <i class="fa-brands fa-github"></i> View All Repositories on GitHub <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact" id="contact">
+            <div class="section-header reveal">
+                <p class="section-subtitle">Let's connect</p>
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <p class="section-description">Have a question or want to work together? Feel free to reach out!</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                         <div>
-                            <div style="display:flex;align-items:center;gap:12px;">
-                                <h3>Web Developer Intern</h3>
-                            </div>
-                            <p class="timeline-company">
-                                <i class="fa-solid fa-building"></i> InAmigos Foundation — NGO
-                            </p>
-                        </div>
-                        <div class="timeline-meta">
-                            <span class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i> May 2026 — Jun 2026
-                            </span>
-                            <span class="timeline-location">
-                                <i class="fa-solid fa-location-dot"></i> Remote
-                            </span>
+                            <h4>Email</h4>
+                            <a href="mailto:rishitasaladi2007@gmail.com">rishitasaladi2007@gmail.com</a>
                         </div>
                     </div>
-                    <div class="timeline-card-body">
-                        <ul class="timeline-points">
-                            <li>Designed NGO website feature prototypes in Figma with a focus on user experience.</li>
-                            <li>Analyzed website UI/UX and proposed design and usability improvements.</li>
-                            <li>Built AI-generated websites using Wix, WordPress, and no-code website builders.</li>
-                        </ul>
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91-9014738680</p>
+                        </div>
                     </div>
-                    <div class="timeline-card-footer">
-                        <div class="timeline-tags">
-                            <span>UI/UX Design</span>
-                            <span>Figma</span>
-                            <span>Wix</span>
-                            <span>WordPress</span>
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kakinada, Andhra Pradesh, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/rishita-saladi-397319324" target="_blank"
+                                rel="noopener noreferrer">linkedin.com/in/rishita-saladi</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
-    <section class="skills" id="skills">
-        <div class="section-header reveal">
-            <p class="section-subtitle">What I work with</p>
-            <h2 class="section-title">My <span>Skills</span></h2>
-            <p class="section-description">Technologies and tools I've been working with to build impactful projects.</p>
-        </div>
-
-        <div class="skills-grid">
-            <div class="skill-card reveal">
-                <div class="skill-card-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <h3>Programming Languages</h3>
-                <p>Core languages for algorithms, data structures, and software development.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Dart</span>
-                </div>
-            </div>
-
-            <div class="skill-card reveal">
-                <div class="skill-card-icon">
-                    <i class="fa-solid fa-globe"></i>
-                </div>
-                <h3>Web Development</h3>
-                <p>Building responsive, modern web applications and interfaces.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">Flask</span>
-                </div>
-            </div>
-
-            <div class="skill-card reveal">
-                <div class="skill-card-icon">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                </div>
-                <h3>App Development</h3>
-                <p>Cross-platform mobile applications with beautiful UI and robust backends.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Flutter</span>
-                    <span class="skill-tag">Dart</span>
-                    <span class="skill-tag">MongoDB</span>
-                </div>
-            </div>
-
-            <div class="skill-card reveal">
-                <div class="skill-card-icon">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
-                <h3>ML &amp; AI Tools</h3>
-                <p>Machine learning frameworks and NLP models for intelligent systems.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">HuggingFace</span>
-                    <span class="skill-tag">XLM-RoBERTa</span>
-                    <span class="skill-tag">MiniLM</span>
-                    <span class="skill-tag">Scikit-learn</span>
-                    <span class="skill-tag">FAISS</span>
-                </div>
-            </div>
-
-            <div class="skill-card reveal">
-                <div class="skill-card-icon">
-                    <i class="fa-solid fa-database"></i>
-                </div>
-                <h3>Databases</h3>
-                <p>Data storage and management for scalable applications.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                </div>
-            </div>
-
-            <div class="skill-card reveal">
-                <div class="skill-card-icon">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
-                <h3>Tools &amp; Platforms</h3>
-                <p>Development tools and platforms for efficient project workflows.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">FastAPI</span>
-                    <span class="skill-tag">Groq LLMs</span>
-                    <span class="skill-tag">Excel Automation</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section class="projects" id="projects">
-        <div class="section-header reveal">
-            <p class="section-subtitle">What I've built</p>
-            <h2 class="section-title">Featured <span>Projects</span></h2>
-            <p class="section-description">A selection of projects showcasing my skills in AI, web development, and full-stack engineering.</p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <i class="fa-solid fa-folder-open folder-icon"></i>
-                    <div class="project-card-links">
-                        <a href="https://github.com/rishita7558/multilingual-polarization-detection" target="_blank" rel="noopener noreferrer" aria-label="GitHub link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card-body">
-                    <h3>Multilingual Polarization Detection</h3>
-                    <p>A multilingual framework for online polarization detection using transformer embeddings with multi-label classification and threshold calibration.</p>
-                    <div class="project-card-tags">
-                        <span>XLM-RoBERTa</span>
-                        <span>MiniLM</span>
-                        <span>Scikit-learn</span>
-                        <span>HuggingFace</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <i class="fa-solid fa-folder-open folder-icon"></i>
-                    <div class="project-card-links">
-                        <a href="https://github.com/rishita7558/timetable-generator-Logic-Beyond" target="_blank" rel="noopener noreferrer" aria-label="GitHub link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card-body">
-                    <h3>Automated Timetable Generator</h3>
-                    <p>A CSV-driven academic timetable generation system with intelligent course scheduling, classroom allocation, and Flask-based visualization with Excel export.</p>
-                    <div class="project-card-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>JavaScript</span>
-                        <span>HTML/CSS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <i class="fa-solid fa-folder-open folder-icon"></i>
-                    <div class="project-card-links">
-                        <a href="https://github.com/rishita7558/Project-Eval-Tool" target="_blank" rel="noopener noreferrer" aria-label="GitHub link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card-body">
-                    <h3>Agentic Virtual Classroom</h3>
-                    <p>An AI-powered virtual classroom platform with RAG-based course assistance, conversational memory, adaptive learning, and microservices architecture.</p>
-                    <div class="project-card-tags">
-                        <span>React.js</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>FAISS</span>
-                        <span>Groq</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <i class="fa-solid fa-folder-open folder-icon"></i>
-                    <div class="project-card-links">
-                        <a href="https://github.com/rishita7558/Seating-Arrangement" target="_blank" rel="noopener noreferrer" aria-label="GitHub link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card-body">
-                    <h3>Exam Seating Arrangement</h3>
-                    <p>A full-stack seating allocation system with constraint-based seat allocation, CSV preprocessing, and automated Excel seating plans with room layouts.</p>
-                    <div class="project-card-tags">
-                        <span>React.js</span>
-                        <span>FastAPI</span>
-                        <span>Python</span>
-                        <span>Tailwind</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="contact" id="contact">
-        <div class="section-header reveal">
-            <p class="section-subtitle">Let's connect</p>
-            <h2 class="section-title">Get In <span>Touch</span></h2>
-            <p class="section-description">Have a question or want to work together? Feel free to reach out!</p>
-        </div>
-
-        <div class="contact-container">
-            <div class="contact-info reveal">
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-                    <div>
-                        <h4>Email</h4>
-                        <a href="mailto:rishitasaladi2007@gmail.com">rishitasaladi2007@gmail.com</a>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+91-9014738680</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Kakinada, Andhra Pradesh, India</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                    <div>
-                        <h4>LinkedIn</h4>
-                        <a href="https://linkedin.com/in/rishita-saladi-397319324" target="_blank" rel="noopener noreferrer">linkedin.com/in/rishita-saladi</a>
-                    </div>
-                </div>
-            </div>
-
-            <form class="contact-form reveal" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" name="name" id="contactName" placeholder="Your Name" required>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" id="contactName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="contactEmail" placeholder="Your Email" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="contactEmail" placeholder="Your Email" required>
+                        <input type="text" name="subject" id="contactSubject" placeholder="Subject">
                     </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" id="contactSubject" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" id="contactMessage" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit" id="submitBtn">
-                    <i class="fa-solid fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-        </div>
+                    <div class="form-group">
+                        <textarea name="message" id="contactMessage" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -510,8 +724,10 @@
             <div class="footer-logo">RS.</div>
             <p class="footer-text">&copy; 2026 Rishita Saladi. Crafted with ❤️</p>
             <div class="footer-socials">
-                <a href="https://linkedin.com/in/rishita-saladi-397319324" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/rishita7558" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/rishita-saladi-397319324" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/rishita7558" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 <a href="mailto:rishitasaladi2007@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
@@ -525,4 +741,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
