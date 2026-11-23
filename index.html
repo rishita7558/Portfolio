@@ -9,8 +9,21 @@
     <meta name="description" content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
     <meta name="keywords" content="Rishita Saladi, portfolio, developer, web developer, machine learning, AI, Flutter, full stack, software engineer, IIIT Dharwad">
     <meta name="author" content="Rishita Saladi">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#171613">
     <link rel="canonical" href="https://rishita7558.github.io/portfolio/">
+    
+    <!-- Prevent Theme Flickering & Respect System Preference -->
+    <script>
+        (function() {
+            try {
+                var saved = localStorage.getItem('portfolio-theme');
+                var theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+                var meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', theme === 'dark' ? '#171613' : '#F3EFE7');
+            } catch (e) {}
+        })();
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
@@ -29,10 +42,10 @@
     <meta property="twitter:description" content="Rishita Saladi — Computer Science undergraduate, Full Stack Developer, and ML enthusiast. Portfolio showcasing projects in AI, web development, and app development.">
     <meta property="twitter:image" content="https://rishita7558.github.io/portfolio/og-image.jpg">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: DM Serif Display, Manrope, IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" onerror="this.onerror=null;this.href='https://unpkg.com/@fortawesome/fontawesome-free@6.5.1/css/all.min.css';">

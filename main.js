@@ -21,22 +21,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== THEME TOGGLE =====
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-    const themeIcon = themeToggle.querySelector('i');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-    html.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+    function getSystemTheme() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
 
-    themeToggle.addEventListener('click', () => {
-        const current = html.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', next);
-        localStorage.setItem('portfolio-theme', next);
-        updateThemeIcon(next);
-    });
+    function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        if (themeIcon) {
+            themeIcon.className = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        }
+        const metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+            metaTheme.setAttribute('content', theme === 'dark' ? '#171613' : '#F3EFE7');
+        }
+    }
 
-    function updateThemeIcon(theme) {
-        themeIcon.className = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+    // Initialize based on saved preference or system preference
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const initialTheme = savedTheme || getSystemTheme();
+    applyTheme(initialTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('portfolio-theme', next);
+            applyTheme(next);
+        });
+    }
+
+    // Listen to system preference changes if no manual preference is saved
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('portfolio-theme')) {
+                applyTheme(e.matches ? 'light' : 'dark');
+            }
+        });
     }
 
     // ===== MOBILE NAVIGATION =====
@@ -105,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = '0 4px 30px var(--shadow-color)';
+        if (window.scrollY > 30) {
+            header.style.boxShadow = '0 4px 16px var(--shadow-color)';
         } else {
             header.style.boxShadow = 'none';
         }

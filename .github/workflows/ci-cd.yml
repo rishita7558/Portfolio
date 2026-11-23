@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -26,24 +26,6 @@ jobs:
 
       - name: Validate HTML syntax
         run: htmlhint "**/*.html"
-        
-      # Note: For a static site, there is no 'build' step. 
-      # If you add Webpack/Vite in the future, you would run `npm ci` and `npm run build` here.
 
-  deploy:
-    name: Deploy to Vercel
-    needs: validate
-    # Only deploy on pushes to the main branch, not on pull requests
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Deploy to Vercel (Production)
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: |
-          npm install -g vercel@latest
-          vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+# Note: Production deployments are handled automatically by Vercel's native
+# GitHub integration upon push to the main branch.
